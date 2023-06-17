@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Mobile Protecter App</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Keep your mobile safe</string>
+    <string name="slide_1_desc">Welcome\n To \n Mobile Protector</string>
+
+    <string name="slide_2_title">Android</string>
+    <string name="slide_2_desc">Android is a mobile operating system developed by Google.</string>
 </resources>
