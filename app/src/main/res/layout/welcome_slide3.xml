@@ -2,36 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen2">
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/trace_image" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@mipmap/ic_launcher"/>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slide_2_title"
-            android:textColor="@android:color/white"
+            android:text="Trace Mode"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/satisfy_regular"
+            android:textColor="#050505"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="470dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/source_sans_italic"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_2_desc"
+            android:text="Trace mode, that allows you to track your phone if it is stolen. Then it secures  mobile phone from strangers. It will take the photo of the person who is trying to unlock your phone and will send it on WhatsApp or email. It also sends the location of your mobile phone. And, if someone is trying to unlock your phone, it will start a high volume siren."
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="#9e9e9e"
             android:textSize="@dimen/slide_desc" />
 
     </LinearLayout>

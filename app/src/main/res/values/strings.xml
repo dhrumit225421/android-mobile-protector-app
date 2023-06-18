@@ -8,6 +8,21 @@
     <string name="slide_1_title">Keep your mobile safe</string>
     <string name="slide_1_desc">Welcome\n To \n Mobile Protector</string>
 
-    <string name="slide_2_title">Android</string>
-    <string name="slide_2_desc">Android is a mobile operating system developed by Google.</string>
+    <string name="slide_2_title">Introduction</string>
+    <string name="slide_2_desc">The purpose of this application is to \n protect mobile phones from theft and \n to provide users with secure and \n reliable mobile protection. It offers \n various features</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="fist_name">Fist Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="com_pwd">Confirm Password</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up_short">Sign up</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_new_user">New User?</string>
 </resources>

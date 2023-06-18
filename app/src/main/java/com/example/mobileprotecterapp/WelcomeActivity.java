@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.mobileprotecterapp.adapter.MyViewPagerAdapter;
+import com.example.mobileprotecterapp.ui.login.LoginActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -109,7 +110,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
         finish();
     }
 

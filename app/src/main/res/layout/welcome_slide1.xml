@@ -7,13 +7,12 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
-
             android:layout_width="300dp"
             android:layout_height="140dp"
             android:src="@drawable/main_welcom_icon" />
@@ -25,13 +24,13 @@
             android:textAlignment="center"
             android:fontFamily="@font/montserra_regular"
             android:textColor="#d12eca"
-            android:textSize="@dimen/slide_title"
+            android:textSize="17dp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="100dp"
             android:layout_marginLeft="@dimen/desc_padding"
             android:layout_marginRight="@dimen/desc_padding"
             android:text="@string/slide_1_desc"

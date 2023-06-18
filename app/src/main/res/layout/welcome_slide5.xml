@@ -2,38 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_screen2">
+    android:background="#FFFFFF">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slide_2_title"
-            android:textColor="@android:color/white"
+            android:layout_marginTop="50dp"
+            android:text="Forgot Mode"
+            android:textAlignment="center"
+            android:fontFamily="@font/satisfy_regular"
+            android:textColor="#050505"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="457dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/source_sans_italic"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_2_desc"
+            android:text="It allows you to find your lost phone. If it is in silent mode or in vibrate mode, then it will start making sound. And if it is silent mode or in vibrate mode then it will start making sound and if it is in switched off mode then it will send you the location of your mobile phone on WhatsApp or email."
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="#9e9e9e"
+
             android:textSize="@dimen/slide_desc" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/fogot_image" />
+
     </LinearLayout>
+
 
 </RelativeLayout>
