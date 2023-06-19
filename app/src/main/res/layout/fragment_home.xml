@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0faff"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/HomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textAlignment="center"
+        android:fontFamily="@font/satisfy_regular"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+
+        android:layout_below="@id/ivCardOne"/>
+    <TextView
+        android:id="@+id/Option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your mode :"
+        android:textAlignment="center"
+        android:fontFamily="@font/source_sans"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:layout_below="@id/ivCardOne"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/cardOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="20dp"
+
+            android:background="@drawable/bg_rounded_purpar"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ivCardOne"
+
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/trace_logo_" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivCardOne"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/satisfy_regular"
+                    android:text="Trace Mode"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pink_rounded"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ivCardTwo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/forgot_logo_" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivCardTwo"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/satisfy_regular"
+                    android:text="Forgo Mode"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/cardDownOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/green_rounded"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ivCardDownOne"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/travel_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivCardDownOne"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/satisfy_regular"
+                    android:text="Travel Mode"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardDownTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/blue_rounded"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ivCardDownTwo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/children_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivCardDownTwo"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:fontFamily="@font/satisfy_regular"
+                    android:text="Forgot Mode"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

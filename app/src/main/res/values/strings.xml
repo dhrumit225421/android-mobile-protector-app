@@ -25,4 +25,11 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="login_new_user">New User?</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_about">About</string>
+    <string name="title_help">Help</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
