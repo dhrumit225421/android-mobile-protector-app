@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.mobileprotecterapp.databinding.FragmentDashboardBinding;
+import com.example.mobileprotecterapp.databinding.FragmentAboutBinding;
 
 public class AboutUsFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentAboutBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         AboutUsViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(AboutUsViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentAboutBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textDashboard;

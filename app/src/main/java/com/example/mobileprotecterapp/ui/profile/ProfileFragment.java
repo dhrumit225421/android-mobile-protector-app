@@ -11,11 +11,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mobileprotecterapp.databinding.FragmentNotificationsBinding;
+import com.example.mobileprotecterapp.databinding.FragmentProfileBinding;
 import com.example.mobileprotecterapp.ui.help.HelpViewModel;
 
 public class ProfileFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentProfileBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

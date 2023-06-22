@@ -23,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mobileprotecterapp.MainActivity;
 import com.example.mobileprotecterapp.R;
 import com.example.mobileprotecterapp.WelcomeActivity;
 import com.example.mobileprotecterapp.ui.login.LoginViewModel;
@@ -81,6 +82,8 @@ public class LoginActivity extends AppCompatActivity {
                     updateUiWithUser(loginResult.getSuccess());
                 }
                 setResult(Activity.RESULT_OK);
+
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
 
                 //Complete and destroy login activity once successful
                 finish();

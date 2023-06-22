@@ -1,22 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f0faff"
     tools:context=".ui.help.HelpFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="0dp"/>
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="210dp"
+        android:background="#000000"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="0.5dp"/>
+    <View
+        android:layout_width="3dp"
+        android:layout_height="210dp"
+        android:background="#000000"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="408dp"/>
+    <ImageView
+        android:id="@+id/Instruction_image"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_Alignment="center"
+        android:src="@drawable/instruction_image"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginStart="0dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="0dp"/>
+    <Button
+        android:id="@+id/Tutorial"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="215dp"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="Watch Tutorials"
+        android:layout_BottomOf="@id/Instruction_image"
+        />
+
+
+    <TextView
+        android:id="@+id/Reach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="270dp"
+        android:layout_centerHorizontal="true"
+        android:layout_="@id/Tutorial"
+        android:fontFamily="@font/source_sans_italic"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        tools:text="Reach out to us " />
+
+   <ImageView
+        android:id="@+id/insta"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/insta"
+       android:layout_below="@id/Reach"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="180dp"/>
+    <ImageView
+          android:id="@+id/whatsapp"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/whatsapp"
+          android:layout_toRightOf="@id/insta"
+          android:layout_marginTop="301dp"
+          android:layout_marginStart="10dp"/>
+
+      <TextView
+          android:id="@+id/FAQs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          tools:text="Mobile protector App FAQs"
+          android:layout_marginTop="350dp"
+          android:layout_marginStart="10dp"
+          android:textSize="20dp"
+          android:textColor="#1128A8"
+          android:textStyle="bold"
+          android:fontFamily="@font/source_sans"
+          android:layout_toBottomOf="@id/Reach"/>
+    <View
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="#D6CECE"
+        android:layout_marginTop="375dp"
+        android:layout_marginLeft="0dp"/>
+    <TextView
+        android:id="@+id/Qone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Impacts on your phone"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:textColor="#FF6376DF"
+        android:textStyle="bold"
+        android:fontFamily="@font/source_sans"
+        android:layout_below="@id/FAQs"/>
+    <TextView
+        android:id="@+id/QTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Your privacy"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:textColor="#6376DF"
+        android:textStyle="bold"
+        android:fontFamily="@font/source_sans"
+        android:layout_below="@id/Qone"/>
+    <TextView
+        android:id="@+id/QThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Private policy"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:textColor="#FF6376DF"
+        android:textStyle="bold"
+        android:fontFamily="@font/source_sans"
+        android:layout_below="@id/QTwo"/>
+
+
+  </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
