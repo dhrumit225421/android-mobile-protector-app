@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobileprotecterapp.MainActivity;
+import com.example.mobileprotecterapp.MapActivity;
 import com.example.mobileprotecterapp.R;
 import com.example.mobileprotecterapp.WelcomeActivity;
 import com.example.mobileprotecterapp.ui.login.LoginViewModel;
