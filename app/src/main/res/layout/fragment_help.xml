@@ -33,7 +33,6 @@
         android:id="@+id/Instruction_image"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:layout_Alignment="center"
         android:src="@drawable/instruction_image"
         android:layout_marginTop="8dp"
         android:layout_marginStart="0dp"/>
@@ -51,7 +50,6 @@
         android:layout_centerHorizontal="true"
         android:enabled="false"
         android:text="Watch Tutorials"
-        android:layout_BottomOf="@id/Instruction_image"
         />
 
 
@@ -62,7 +60,6 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="270dp"
         android:layout_centerHorizontal="true"
-        android:layout_="@id/Tutorial"
         android:fontFamily="@font/source_sans_italic"
         android:textColor="#000000"
         android:textSize="20dp"
@@ -95,8 +92,7 @@
           android:textSize="20dp"
           android:textColor="#1128A8"
           android:textStyle="bold"
-          android:fontFamily="@font/source_sans"
-          android:layout_toBottomOf="@id/Reach"/>
+          android:fontFamily="@font/source_sans" />
     <View
         android:layout_width="300dp"
         android:layout_height="1dp"

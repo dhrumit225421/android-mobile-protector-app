@@ -1,5 +1,6 @@
 package com.example.mobileprotecterapp.ui.about;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,17 +17,18 @@ public class AboutUsFragment extends Fragment {
 
     private FragmentAboutBinding binding;
 
+    @SuppressLint("SetJavaScriptEnabled")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         AboutUsViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(AboutUsViewModel.class);
 
         binding = FragmentAboutBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        binding.webView.getSettings().setJavaScriptEnabled(true);
+        binding.webView.loadUrl("file:///android_asset/aboutUs.html");
+
+        return binding.getRoot();
     }
 
     @Override

@@ -9,8 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
-import com.example.mobileprotecterapp.databinding.FragmentNotificationsBinding;
 import com.example.mobileprotecterapp.databinding.FragmentProfileBinding;
 import com.example.mobileprotecterapp.ui.help.HelpViewModel;
 
@@ -23,11 +21,9 @@ public class ProfileFragment extends Fragment {
         HelpViewModel notificationsViewModel =
                 new ViewModelProvider(this).get(HelpViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
