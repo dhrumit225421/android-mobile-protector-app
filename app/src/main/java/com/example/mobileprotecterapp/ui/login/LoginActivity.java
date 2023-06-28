@@ -27,15 +27,10 @@ import com.example.mobileprotecterapp.MainActivity;
 import com.example.mobileprotecterapp.MapActivity;
 import com.example.mobileprotecterapp.R;
 import com.example.mobileprotecterapp.WelcomeActivity;
-import com.example.mobileprotecterapp.model.ResponseLogin;
-import com.example.mobileprotecterapp.model.User;
 import com.example.mobileprotecterapp.ui.login.LoginViewModel;
 import com.example.mobileprotecterapp.ui.login.LoginViewModelFactory;
 import com.example.mobileprotecterapp.databinding.ActivityLoginBinding;
-import com.example.mobileprotecterapp.utils.AppUtil;
-import com.example.mobileprotecterapp.utils.LibFile;
 import com.google.android.material.textfield.TextInputEditText;
-import com.shreejipackaging.data.ResponseManager;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -74,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        /*loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
+        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {
                 if (loginResult == null) {
@@ -94,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                 //Complete and destroy login activity once successful
                 finish();
             }
-        });*/
+        });
 
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override
@@ -120,10 +115,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    User user = new User();
-                    user.setUserName(usernameEditText.getText().toString());
-                    user.setPassword(passwordEditText.getText().toString());
-                    userLogin(user);
+                    loginViewModel.login(usernameEditText.getText().toString(),
+                            passwordEditText.getText().toString());
                 }
                 return false;
             }
@@ -133,10 +126,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                User user = new User();
-                user.setUserName(usernameEditText.getText().toString());
-                user.setPassword(passwordEditText.getText().toString());
-                userLogin(user);
+                loginViewModel.login(usernameEditText.getText().toString(),
+                        passwordEditText.getText().toString());
             }
         });
 
@@ -158,45 +149,5 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
-    }
-
-    private void userLogin(User userName) {
-        loginViewModel.isLoadingDisplay(true);
-        loginViewModel.userLogin(userName).observe(this, new Observer<ResponseManager<ResponseLogin>>() {
-            @Override
-            public void onChanged(ResponseManager<ResponseLogin> responseLoginResponseManager) {
-                loginViewModel.isLoadingDisplay(false);
-
-                if (responseLoginResponseManager instanceof ResponseManager.Success) {
-                    if (((ResponseManager.Success<ResponseLogin>) responseLoginResponseManager).getData().getToken() != null) {
-                        LibFile.Companion.getInstance(getBaseContext())
-                            .setString(LibFile.KEY_TOKEN, ((ResponseManager.Success<ResponseLogin>) responseLoginResponseManager).getData().getToken());
-
-                        /*LibFile.Companion.getInstance(getBaseContext())
-                            .setString(LibFile.KEY_LOGIN_USER, Gson().toJson(it.data.user))*/
-
-                        //Goto to main Activity
-                        setResult(Activity.RESULT_OK);
-
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
-                        //Complete and destroy login activity once successful
-                        finish();
-                    }
-
-                } else if (responseLoginResponseManager instanceof ResponseManager.Unauthenticated) {
-
-                    if (!((ResponseManager.Unauthenticated) responseLoginResponseManager).getMessage().isEmpty()) {
-                        AppUtil.Companion.displayInfoDialog(
-                                LoginActivity.this,
-                        ((ResponseManager.Unauthenticated) responseLoginResponseManager).getMessage()
-                        );
-                    }
-
-                } else {
-                    AppUtil.Companion.displayInfoDialog(LoginActivity.this, ((ResponseManager.Error) responseLoginResponseManager).getMessage())
-                }
-            }
-        });
     }
 }

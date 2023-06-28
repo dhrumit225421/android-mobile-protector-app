@@ -88,7 +88,7 @@ dependencies {
     //implementation "android.arch.work:work-runtime-ktx:$work_version"
 
     //progress lib
-    implementation 'com.kaopiz:kprogresshud:1.2.0'
+//    implementation 'com.kaopiz:kprogresshud:1.2.0'
 
     //Facebook stetho
     implementation 'com.facebook.stetho:stetho:1.5.1'
